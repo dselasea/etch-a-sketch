@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,14 @@
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
+    background: #16161a;
+    color: #fff;
+}
 
+h1 {
+    text-align: center;
+    margin-top: 1rem;
 }
 
 .container {
@@ -24,21 +33,30 @@ body {
 }
 
 .container .buttons .canvas-buttons {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
 .btn {
-    padding: .3rem 1rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    transition: all .2s ease-in;
+}
+
+.btn:active {
+    transform: scale(.9)
 }
 
 .canvas {
     height: 500px;
     width: 500px;
     margin: 0 auto;
-    border: 1px solid #000;
+    border: 10px solid #fff;
+    border-radius: 10px;
+    background: #fff;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
 }
