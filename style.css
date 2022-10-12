@@ -10,9 +10,35 @@ body {
 
 .container {
     max-width: 960px;
+    margin: 2rem auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.container .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .buttons .canvas-buttons {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.btn {
+    padding: .3rem 1rem;
+}
+
+.canvas {
+    height: 500px;
+    width: 500px;
     margin: 0 auto;
-    border: 2px solid #000;
-    height: 100vh;
+    border: 1px solid #000;
     display: grid;
-    grid-template-columns: repeat(100, 1fr)
+    grid-template-columns: repeat(10, 1fr);
 }

@@ -1,19 +1,15 @@
-const container = document.querySelector('.container')
+const canvas = document.querySelector('.canvas')
 
-const GRID_NUMBER = 10000;
+const GRID_NUMBER = 100;
 for(let i = 0; i < GRID_NUMBER; i++){
     const grid = document.createElement("div")
     grid.style.border = '1px solid black'
-    container.appendChild(grid)
+    canvas.appendChild(grid)
 }
 
-const grids = Array.from(container.children);
+const grids = Array.from(canvas.children);
 grids.forEach(grid => {
     grid.addEventListener("mouseenter", () => {
         grid.style.backgroundColor = "crimson"
     })
-})
-
-container.addEventListener("onmousemove", () => {
-    console.log("Entered")
 })
