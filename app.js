@@ -15,7 +15,7 @@ function createGrid(){
         const grid = document.createElement("div") 
         // grid.style.borderRight = '1px solid black'
         // grid.style.borderBottom = '1px solid black'
-        grid.setAttribute('style', 'border-bottom: 1px solid rgba(0, 0, 0, 0.5); border-right: 1px solid rgba(0, 0, 0, 0.5);')
+        grid.setAttribute('style', 'border-bottom: 1px solid rgba(0, 0, 0, 0.3); border-right: 1px solid rgba(0, 0, 0, 0.3);')
         canvas.appendChild(grid)
     }
     colorGrid()
@@ -31,7 +31,7 @@ function gridSize() {
         canvas.setAttribute('style', 'grid-template-columns: repeat(' + number.value + ', 1fr)')
         // grid.style.borderRight = '1px solid black'
         // grid.style.borderBottom = '1px solid black'
-        grid.setAttribute('style', 'border-bottom: 1px solid rgba(0, 0, 0, 0.5); border-right: 1px solid rgba(0, 0, 0, 0.5); opacity: .5;')
+        grid.setAttribute('style', 'border-bottom: 1px solid rgba(0, 0, 0, 0.3); border-right: 1px solid rgba(0, 0, 0, 0.3);')
         canvas.appendChild(grid)
     }
     gridNumber.textContent = `${number.value} x ${number.value}`;
