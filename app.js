@@ -10,18 +10,21 @@ createGrid()
 function createGrid(){
     for(let i = 0; i < 4096; i++){
         const grid = document.createElement("div") 
-        grid.style.border = '.5px solid black'
+        grid.style.border = '1px solid black'
         canvas.appendChild(grid)
     }
+    colorGrid()
 }
 
-const grids = Array.from(canvas.children);
-grids.forEach(grid => {
+function colorGrid(){
+    const grids = Array.from(canvas.children);
+    grids.forEach(grid => {
     grid.addEventListener("mouseover", (e) => {
-        grid.style.backgroundColor = color.value
-        
+        e.target.style.backgroundColor = color.value
+        })
     })
-})
+}
+
 
 clear.addEventListener('click', () => {
     canvas.querySelectorAll('.canvas div').forEach(div => {
@@ -40,5 +43,6 @@ apply.addEventListener('click', () => {
         grid.style.border = '.5px solid black'
         canvas.appendChild(grid)
     }
+    colorGrid()
 })
 
