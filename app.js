@@ -13,7 +13,9 @@ clearColor.addEventListener('click', eraseColors)
 function createGrid(){
     for(let i = 0; i < 4096; i++){
         const grid = document.createElement("div") 
-        grid.style.border = '1px solid black'
+        // grid.style.borderRight = '1px solid black'
+        // grid.style.borderBottom = '1px solid black'
+        grid.setAttribute('style', 'border-bottom: 1px solid rgba(0, 0, 0, 0.5); border-right: 1px solid rgba(0, 0, 0, 0.5);')
         canvas.appendChild(grid)
     }
     colorGrid()
@@ -27,7 +29,9 @@ function gridSize() {
     for(let i = 0; i < doubleNumber; i++){
         const grid = document.createElement("div") 
         canvas.setAttribute('style', 'grid-template-columns: repeat(' + number.value + ', 1fr)')
-        grid.style.border = '.5px solid black'
+        // grid.style.borderRight = '1px solid black'
+        // grid.style.borderBottom = '1px solid black'
+        grid.setAttribute('style', 'border-bottom: 1px solid rgba(0, 0, 0, 0.5); border-right: 1px solid rgba(0, 0, 0, 0.5); opacity: .5;')
         canvas.appendChild(grid)
     }
     gridNumber.textContent = `${number.value} x ${number.value}`;
