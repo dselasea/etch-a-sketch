@@ -1,20 +1,30 @@
 const canvas = document.querySelector('.canvas')
-const input = document.querySelector('input')
+const number = document.querySelector('#number')
+const apply = document.querySelector('#apply')
+const clear = document.querySelector('#clear')
+const color = document.querySelector('#color')
 
-const GRID_NUMBER = 100;
-for(let i = 0; i < GRID_NUMBER; i++){
-    const grid = document.createElement("div")
-    grid.style.border = '1px solid black'
-    canvas.appendChild(grid)
+
+createGrid()
+
+function createGrid(){
+    for(let i = 0; i < 4096; i++){
+        const grid = document.createElement("div") 
+        grid.style.border = '.5px solid black'
+        canvas.appendChild(grid)
+    }
 }
 
 const grids = Array.from(canvas.children);
 grids.forEach(grid => {
-    grid.addEventListener("mouseenter", () => {
-        grid.style.backgroundColor = "crimson"
+    grid.addEventListener("mouseover", (e) => {
+        grid.style.backgroundColor = color.value
     })
 })
 
-input.addEventListener('input', () => {
-    console.log(input.value)
+clear.addEventListener('click', () => {
+    canvas.querySelectorAll('.canvas div').forEach(div => {
+        div.style.backgroundColor = "#fff"
+    })
 })
+

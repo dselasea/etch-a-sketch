@@ -12,10 +12,13 @@
         <div class="container">
             <div class="buttons">
                 <div class="canvas-buttons">
+                    <label for="color">Choose Color</label>
+                    <input type="color" id="color" value="#e66465">
                     <button class="btn" id="eraser">Eraser</button>
                     <button class="btn" id="clear">Clear</button>
                     <label for="range">Grid Size : <output id="num">0</output></label>
-                    <input type="range" max="64" oninput="num.value = this.value" >
+                    <input type="text" id="number">
+                    <button class="btn" id="apply">Apply</button>
                 </div>
             </div>
             <div class="canvas">
