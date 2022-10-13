@@ -19,6 +19,7 @@ const grids = Array.from(canvas.children);
 grids.forEach(grid => {
     grid.addEventListener("mouseover", (e) => {
         grid.style.backgroundColor = color.value
+        
     })
 })
 
@@ -26,5 +27,18 @@ clear.addEventListener('click', () => {
     canvas.querySelectorAll('.canvas div').forEach(div => {
         div.style.backgroundColor = "#fff"
     })
+})
+
+apply.addEventListener('click', () => {
+    if(canvas.innerHTML){
+        canvas.innerHTML = ""
+    }
+    let doubleNumber = number.value * number.value
+    for(let i = 0; i < doubleNumber; i++){
+        const grid = document.createElement("div") 
+        canvas.setAttribute('style', 'grid-template-columns: repeat(' + number.value + ', 1fr)')
+        grid.style.border = '.5px solid black'
+        canvas.appendChild(grid)
+    }
 })
 
