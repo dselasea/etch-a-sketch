@@ -38,6 +38,12 @@ h1 {
     gap: 2rem;
 }
 
+.buttons {
+    background: #242323;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
 .buttons #number {
     margin: 1rem
 }

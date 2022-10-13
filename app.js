@@ -1,8 +1,8 @@
 const canvas = document.querySelector('.canvas')
 const number = document.querySelector('#number')
-const apply = document.querySelector('#apply')
 const clear = document.querySelector('#clear')
 const color = document.querySelector('#color')
+const gridNumber = document.querySelector('#num')
 
 
 createGrid()
@@ -32,7 +32,7 @@ clear.addEventListener('click', () => {
     })
 })
 
-apply.addEventListener('click', () => {
+number.addEventListener('input', () => {
     if(canvas.innerHTML){
         canvas.innerHTML = ""
     }
@@ -43,6 +43,7 @@ apply.addEventListener('click', () => {
         grid.style.border = '.5px solid black'
         canvas.appendChild(grid)
     }
+    gridNumber.textContent = number.value;
     colorGrid()
 })
 
